@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="700.0" stylesheets="@../css/styles.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.icet.library.controller.ReturnBookController">
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+    <children>
+        <Label layoutX="30.0" layoutY="20.0" styleClass="page-title" text="Return Book" />
+
+        <GridPane hgap="15.0" layoutX="30.0" layoutY="70.0" vgap="12.0">
+            <children>
+                <Label text="Borrowed Book:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <children>
+                        <ComboBox fx:id="cmbBorrowedBook" prefWidth="240.0" promptText="Select Issued Book" />
+                        <Button onAction="#btnSearchBookOnAction" styleClass="secondary-button" text="Load Details" />
+                    </children>
+                </HBox>
+
+                <Label text="Member Info:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="lblMemberInfo" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Borrowed Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="lblBorrowedDate" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Due Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="lblDueDate" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="lblOverdueStatus" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Return Date:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <DatePicker fx:id="dpReturnDate" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Button onAction="#btnReturnBookOnAction" styleClass="primary-button" text="Return Book" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

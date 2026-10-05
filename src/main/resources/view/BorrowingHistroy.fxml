@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="720.0" stylesheets="@../css/styles.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.icet.library.controller.BorrowingHistoryController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <children>
+        <Label layoutX="20.0" layoutY="15.0" styleClass="page-title" text="Borrowing History Log" />
+
+        <TableView fx:id="tblHistory" layoutX="20.0" layoutY="65.0" prefHeight="440.0" prefWidth="680.0">
+            <columns>
+                <TableColumn fx:id="colMemberId" prefWidth="90.0" text="Member ID" />
+                <TableColumn fx:id="colBookTitle" prefWidth="160.0" text="Book Title" />
+                <TableColumn fx:id="colIssueDate" prefWidth="110.0" text="Issue Date" />
+                <TableColumn fx:id="colDueDate" prefWidth="110.0" text="Due Date" />
+                <TableColumn fx:id="colReturnDate" prefWidth="110.0" text="Return Date" />
+                <TableColumn fx:id="colStatus" prefWidth="95.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

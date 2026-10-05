@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="720.0" stylesheets="@../css/styles.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.icet.library.controller.ManageMembersController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <children>
+        <Label layoutX="20.0" layoutY="15.0" styleClass="page-title" text="View / Manage Members" />
+
+        <HBox layoutX="20.0" layoutY="60.0" spacing="10.0">
+            <children>
+                <TextField fx:id="txtSearch" prefWidth="300.0" promptText="Search by Name or ID..." />
+                <Button onAction="#btnSearchOnAction" styleClass="primary-button" text="Search" />
+                <Button onAction="#btnDeleteOnAction" styleClass="logout-button" text="Delete Selected" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tblMembers" layoutX="20.0" layoutY="110.0" prefHeight="400.0" prefWidth="680.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="80.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="colEmail" prefWidth="170.0" text="Email" />
+                <TableColumn fx:id="colPhone" prefWidth="120.0" text="Phone" />
+                <TableColumn fx:id="colAddress" prefWidth="140.0" text="Address" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
